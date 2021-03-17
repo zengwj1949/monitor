@@ -162,3 +162,7 @@ data:
         action: replace
         target_label: kubernetes_pod_name
 
+    alerting:
+      alertmanagers:
+      - static_configs:
+        - targets: ["alertmanager:9093"]

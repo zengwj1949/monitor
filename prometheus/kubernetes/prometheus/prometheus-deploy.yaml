@@ -31,13 +31,15 @@ spec:
           name: data
         - mountPath: "/etc/prometheus"
           name: config-volume
+        - mountPath: "/etc/prometheus-rules"
+          name: prometheus-rules
         resources:
           requests:
             cpu: 100m
             memory: 128Mi
           limits:
             cpu: 500m
-            memory: 512Mi
+            memory: 768Mi
       serviceAccount: prometheus
       securityContext:
         runAsUser: 0
@@ -48,3 +50,6 @@ spec:
       - name: data
         persistentVolumeClaim:
           claimName: prometheus-pvc
+      - name: prometheus-rules
+        configMap:
+          name: prometheus-rules
