@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - args:
-        - --ding.profile=webhook1=https://oapi.dingtalk.com/robot/send?access_token=c0f2313bc37c034a999c5801fdbf2de97b3e6e6097499b2f3c1ac8d6791a4583
+        - --ding.profile=webhook1=https://oapi.dingk.com/robot/send?access_token=c0f231
         name: prometheus-webhook-dingtalk
         image: quay.io/timonwong/prometheus-webhook-dingtalk
         ports:
